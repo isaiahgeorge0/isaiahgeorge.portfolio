@@ -1,3 +1,6 @@
+// Enable animations only when JS is running
+document.body.classList.add("js-enabled");
+
 // Fade-in animation using IntersectionObserver
 const sections = document.querySelectorAll("section");
 
@@ -11,6 +14,5 @@ const observer = new IntersectionObserver((entries) => {
   threshold: 0.1,
 });
 
-sections.forEach(section => {
-  observer.observe(section);
-});
+sections.forEach(section => observer.observe(section));
+
