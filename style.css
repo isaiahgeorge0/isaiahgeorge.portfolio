@@ -1,1 +1,105 @@
+/* Reset and font */
+body {
+  margin: 0;
+  font-family: 'Sora', sans-serif;
+  background: #121212;
+  color: #f0f0f0;
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  font-family: 'Inter', sans-serif;
+  color: #ffffff;
+}
+
+a {
+  color: #2979ff;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2rem;
+  background: #1e1e1e;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.hero {
+  text-align: center;
+  padding: 6rem 2rem;
+  background: linear-gradient(120deg, #121212, #1f1f1f);
+}
+
+.hero h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.cta-button {
+  background: #2979ff;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  margin-top: 1rem;
+  display: inline-block;
+}
+
+.about, .services, .contact {
+  padding: 4rem 2rem;
+  max-width: 900px;
+  margin: auto;
+}
+
+.portfolio {
+  padding: 4rem 2rem;
+  background: #181818;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.gallery .item img, 
+.gallery .item video {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.service-card {
+  background: #1f1f1f;
+  margin-top: 2rem;
+  padding: 1.5rem;
+  border-radius: 10px;
+}
+
+.contact ul {
+  display: flex;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+footer {
+  text-align: center;
+  padding: 2rem;
+  background: #1a1a1a;
+  color: #999;
+}
 
