@@ -33,6 +33,20 @@ img {
   height: auto;
   display: block;
 }
+
+/* Style for the clickable 'Isaiah George' logo */
+.site-title {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 1.5rem;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.site-title:hover {
+  color: #2979ff; /* Change the color when hovering */
+}
+
 /* ========== NAVIGATION ========== */
 .navbar {
   display: flex;
@@ -47,9 +61,6 @@ img {
   z-index: 1000;
   box-sizing: border-box; /* Prevent any overflow issues */
 }
-
-
-
 
 .navbar h1 {
   font-size: 1.5rem;
