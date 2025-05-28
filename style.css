@@ -70,10 +70,16 @@ ul {
   background: #181818;
 }
 
+.portfolio h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
 .gallery {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1rem;
+  gap: 1.5rem;
   margin-top: 2rem;
 }
 
@@ -81,6 +87,31 @@ ul {
 .gallery .item video {
   width: 100%;
   border-radius: 10px;
+}
+
+/* Hover Caption for Gallery Items */
+.gallery .item {
+  position: relative;
+  overflow: hidden;
+}
+
+.hover-caption {
+  position: absolute;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.65);
+  color: #f0f0f0;
+  width: 100%;
+  padding: 0.75rem;
+  text-align: center;
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-radius: 0 0 10px 10px;
+}
+
+.gallery .item:hover .hover-caption {
+  opacity: 1;
 }
 
 .service-card {
