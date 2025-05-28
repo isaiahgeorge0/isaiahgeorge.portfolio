@@ -2,17 +2,41 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Isaiah George — Digital Creative & UGC Specialist"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Isaiah George — Digital Creative & UGC Specialist" />
   <title>Isaiah George | Digital Creator</title>
+
+  <!-- Stylesheets -->
   <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600&family=Inter:wght@300;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600&family=Inter:wght@300;500&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/lightbox2@2/dist/css/lightbox.min.css" rel="stylesheet" />
+
+  <!-- Favicons -->
+  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+  <link rel="manifest" href="images/site.webmanifest">
+  <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+
+  <!-- SEO -->
+  <meta name="author" content="Isaiah George">
+  <meta name="keywords" content="Isaiah George, UGC Creator, Digital Content, Video Editing, London Creator, Portfolio Design">
+  <meta property="og:title" content="Isaiah George | Digital Creator">
+  <meta property="og:description" content="Digital Creator & UGC Specialist — creating for brands across the US and UK.">
+  <meta property="og:image" content="images/IMG_6945.JPG">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://isaiahgeorge-portfolio.netlify.app">
+  <meta name="twitter:card" content="summary_large_image">
 </head>
+
 <body>
+
+  <!-- Navigation -->
   <header>
     <nav class="navbar">
-      <h1>Isaiah George</h1>
-      <ul class="nav-links">
+      <h1 class="site-title">Isaiah George</h1>
+      <div class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">&#9776;</div>
+      <ul class="nav-links" id="navLinks">
         <li><a href="#about">About</a></li>
         <li><a href="#portfolio">Portfolio</a></li>
         <li><a href="#services">Services</a></li>
@@ -21,6 +45,7 @@
     </nav>
   </header>
 
+  <!-- Hero Section -->
   <section class="hero">
     <div class="hero-text">
       <h2>Digital Creator & UGC Specialist</h2>
@@ -29,12 +54,14 @@
     </div>
   </section>
 
+  <!-- About -->
   <section id="about" class="about">
     <h2>About Me</h2>
-    <p>Hey, I’m Isaiah. I’m a London-born creator currently expanding my brand across the U.S. and U.K. My skillset includes content creation, freelance web design, and helping brands tell better stories through video and personal branding.</p>
-    <p>I’m building a lifestyle where creativity meets freedom. My toolkit? A Sony ZV-E10, a 16mm Sigma lens, iPhones for mobility, and my laptop for digital design, editing, and storytelling.</p>
+    <p>Hey, I’m Isaiah. I’m a London-born creator expanding my brand across the U.S. and U.K. My skillset includes content creation, freelance web design, and helping brands tell better stories through video and personal branding.</p>
+    <p>I’m building a lifestyle where creativity meets freedom. My toolkit? A Sony ZV-E10, 16mm Sigma lens, iPhones for mobility, and my laptop for digital design, editing, and storytelling.</p>
   </section>
 
+  <!-- Portfolio -->
   <section id="portfolio" class="portfolio">
     <h2>Portfolio</h2>
     <div class="gallery">
@@ -44,7 +71,7 @@
         </a>
         <div class="hover-caption">Editorial Shoot</div>
       </div>
-  
+
       <div class="item">
         <video controls>
           <source src="images/your-video1.mp4" type="video/mp4">
@@ -52,7 +79,7 @@
         </video>
         <div class="hover-caption">Behind the Scenes</div>
       </div>
-  
+
       <div class="item">
         <a href="images/IMG_.73456.jpeg" data-lightbox="portfolio" data-title="Studio Portrait">
           <img src="images/IMG_.73456.jpeg" alt="Studio Portrait">
@@ -61,8 +88,8 @@
       </div>
     </div>
   </section>
-  
 
+  <!-- Services -->
   <section id="services" class="services">
     <h2>What I Offer</h2>
     <div class="service-card">
@@ -79,6 +106,7 @@
     </div>
   </section>
 
+  <!-- Contact -->
   <section id="contact" class="contact">
     <h2>Let’s Connect</h2>
     <p>Reach out via email or drop me a message on social media.</p>
@@ -87,8 +115,21 @@
       <li><a href="https://www.instagram.com/isaiahgeorge0" target="_blank">Instagram</a></li>
       <li><a href="https://www.tiktok.com/@isaiahgeorge00" target="_blank">TikTok</a></li>
     </ul>
+
+    <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" id="contact-form">
+      <input type="hidden" name="form-name" value="contact" />
+      <p style="display:none">
+        <label>Don’t fill this out if you’re human: <input name="bot-field" /></label>
+      </p>
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+      <p id="confirmation-message">Thanks! Your message was sent.</p>
+    </form>
   </section>
 
+  <!-- Portfolio Gallery -->
   <section class="portfolio-gallery">
     <h2>Recent Shoot</h2>
     <div class="image-grid">
@@ -114,11 +155,26 @@
       </div>
     </div>
   </section>
-  
 
+  <!-- Footer -->
   <footer>
     <p>© 2025 Isaiah George. Built by me.</p>
   </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/lightbox2@2/dist/js/lightbox.min.js"></script>
+  <script src="scripts/lightbox-init.js"></script>
+  <script src="scripts/scroll-highlight.js"></script>
+  <script src="scripts/form-handler.js"></script>
+  <script src="scripts/analytics.js"></script>
+  <script src="scripts/back-to-top.js"></script>
+  <script src="scripts/mobile-nav.js"></script>
+  <script src="scripts/main.js"></script>
+
+  <!-- Back to Top Button -->
+  <button id="backToTop" aria-label="Scroll to top">↑</button>
 </body>
 </html>
+
+
 
