@@ -4,12 +4,15 @@ html {
 }
 body {
   margin: 0;
-  padding-top: 90px;
+  padding-top: 90px; /* Keeps space for the fixed navbar */
   font-family: 'Sora', sans-serif;
   background-color: #121212;
   color: #f0f0f0;
   line-height: 1.6;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  width: 100%; /* Ensure the body takes up full width */
 }
+
 
 
 h1, h2, h3 {
@@ -32,18 +35,19 @@ img {
 }
 /* ========== NAVIGATION ========== */
 .navbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1000;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.5rem 1.5rem;
+  padding: 1.5rem 2rem;
   background: #1e1e1e;
-  position: relative; /* ← add this line to fix menu-toggle positioning */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%; /* Ensure navbar spans the full width of the screen */
+  z-index: 1000;
+  box-sizing: border-box; /* Prevent any overflow issues */
 }
+
 
 
 
