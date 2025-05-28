@@ -4,12 +4,13 @@ html {
 }
 body {
   margin: 0;
-  padding-top: 90px; /* Prevent content from being hidden behind the fixed navbar */
+  padding-top: 90px;
   font-family: 'Sora', sans-serif;
   background-color: #121212;
   color: #f0f0f0;
   line-height: 1.6;
 }
+
 
 h1, h2, h3 {
   font-family: 'Inter', sans-serif;
@@ -31,17 +32,16 @@ img {
 }
 /* ========== NAVIGATION ========== */
 .navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2rem;
+  background: #1e1e1e;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 1000;
-  background: #1e1e1e;
-  padding: 1.5rem 2rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* subtle shadow */
 }
 
 .navbar h1 {
