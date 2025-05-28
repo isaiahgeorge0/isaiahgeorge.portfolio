@@ -4,11 +4,13 @@ html {
 }
 body {
   margin: 0;
+  padding-top: 90px; /* Prevent content from being hidden behind the fixed navbar */
   font-family: 'Sora', sans-serif;
   background-color: #121212;
   color: #f0f0f0;
   line-height: 1.6;
 }
+
 h1, h2, h3 {
   font-family: 'Inter', sans-serif;
   color: #ffffff;
@@ -29,15 +31,19 @@ img {
 }
 /* ========== NAVIGATION ========== */
 .navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background: #1e1e1e;
+  padding: 1.5rem 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.5rem 2rem;
-  background: #1e1e1e;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* subtle shadow */
 }
+
 .navbar h1 {
   font-size: 1.5rem;
   white-space: nowrap;
@@ -262,5 +268,39 @@ section {
   transform: translateY(0);
 }
 
+/* ========== NAVBAR SCROLL EFFECT ========== */
+.navbar.scrolled {
+  background: rgba(30, 30, 30, 0.95); /* semi-transparent */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  transition: all 0.3s ease;
+}
+
+/* ========== CTA BUTTON HOVER EFFECT ========== */
+.cta-button:hover {
+  background-color: #1a5cd8;
+  transform: scale(1.05) translateY(-2px);
+  box-shadow: 0 6px 18px rgba(41, 121, 255, 0.3);
+  transition: all 0.3s ease;
+}
+
+/* ========== HERO TEXT ANIMATION ========== */
+.hero-text {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 1s ease-out 0.5s forwards;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ========== IMAGE HOVER SCALE UPGRADE ========== */
+.gallery .item:hover img,
+.image-container:hover img {
+  transform: scale(1.06);
+}
 
   
