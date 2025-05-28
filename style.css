@@ -63,11 +63,17 @@ img {
   font-size: 2rem;
   color: white;
   cursor: pointer;
+  position: absolute;
+  right: 2rem;
+  top: 1.5rem;
+  z-index: 1100;
 }
+
 @media (max-width: 768px) {
   .menu-toggle {
     display: block;
   }
+
   .nav-links {
     position: absolute;
     top: 70px;
@@ -78,11 +84,14 @@ img {
     padding: 1rem 2rem;
     border-radius: 10px;
     display: none;
+    z-index: 1050;
   }
+
   .nav-links.active {
     display: flex;
   }
 }
+
 /* ========== HERO SECTION ========== */
 .hero {
   text-align: center;
