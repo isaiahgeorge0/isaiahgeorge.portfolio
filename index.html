@@ -166,14 +166,17 @@
   </footer>
 
   <!-- Scripts -->
-  <script src="https://cdn.jsdelivr.net/npm/lightbox2@2/dist/js/lightbox.min.js"></script>
-  <script src="scripts/lightbox-init.js"></script>
-  <script src="scripts/scroll-highlight.js"></script>
-  <script src="scripts/form-handler.js"></script>
-  <script src="scripts/analytics.js"></script>
-  <script src="scripts/back-to-top.js"></script>
-  <script src="scripts/mobile-nav.js"></script>
-  <script src="scripts/main.js"></script>
+<!-- External Library (keep this without defer) -->
+<script src="https://cdn.jsdelivr.net/npm/lightbox2@2/dist/js/lightbox.min.js"></script>
+
+<!-- Local Scripts (with defer) -->
+<script src="scripts/lightbox-init.js" defer></script>
+<script src="scripts/scroll-highlight.js" defer></script>
+<script src="scripts/form-handler.js" defer></script>
+<script src="scripts/analytics.js" defer></script>
+<script src="scripts/back-to-top.js" defer></script>
+<script src="scripts/mobile-nav.js" defer></script>
+<script src="scripts/main.js" defer></script>
 
   <!-- Back to Top Button -->
   <button id="backToTop" aria-label="Scroll to top">↑</button>

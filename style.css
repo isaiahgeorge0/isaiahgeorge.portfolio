@@ -243,14 +243,14 @@ footer {
 }
 
 /* ========== ANIMATIONS ========== */
-/* Default (no JS): Sections are visible immediately */
+/* Default visibility if JS is off */
 section {
   opacity: 1;
   transform: translateY(0);
   transition: none;
 }
 
-/* Animation when JS enables fade-in */
+/* Only if JS is working */
 .js-enabled section {
   opacity: 0;
   transform: translateY(40px);
