@@ -1,5 +1,5 @@
 // Add class to enable scroll-based animations
-document.body.classList.add("js-enabled");
+document.documentElement.classList.add("js-enabled"); // adds class to <html>
 
 const sections = document.querySelectorAll("section");
 
