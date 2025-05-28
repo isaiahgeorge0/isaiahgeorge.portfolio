@@ -349,3 +349,66 @@ section {
 #services {
   padding-top: 100px;  /* Adjust this based on your navbar height */
 }
+
+
+/* Blog Section */
+.blog {
+  padding: 4rem 2rem;
+  max-width: 1000px;
+  margin: auto;
+  background-color: #181818; /* Dark background for contrast */
+  color: #f0f0f0;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.blog h2 {
+  font-size: 2.5rem;
+  color: #2979ff; /* Highlight color for the blog heading */
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/* Blog Post Titles */
+.blog h3 {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.8rem;
+  color: #ffffff; /* Light color for headings */
+  margin-bottom: 1rem;
+  transition: color 0.3s ease; /* Transition for hover effect */
+}
+
+.blog h3:hover {
+  color: #1a5cd8; /* Change color on hover */
+}
+
+/* Blog Post Preview */
+.blog .post p {
+  font-family: 'Sora', sans-serif;
+  color: #bbb;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+/* Read More Button */
+.read-more {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: #2979ff; /* Blue color for the button */
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Button effects */
+}
+
+.read-more:hover {
+  background-color: #1a5cd8; /* Darker blue when hovered */
+  transform: translateY(-2px); /* Slight lift effect */
+}
+
+.read-more:focus {
+  outline: none;
+  box-shadow: 0 0 10px rgba(41, 121, 255, 0.5); /* Focused state with glow */
+}
