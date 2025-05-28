@@ -332,3 +332,9 @@ section {
 }
 
   
+
+
+/* Add top padding for services page */
+#services {
+  padding-top: 100px;  /* Adjust this based on your navbar height */
+}
