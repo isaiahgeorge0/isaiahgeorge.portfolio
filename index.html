@@ -3,14 +3,17 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Isaiah George — Digital Creative & UGC Specialist" />
-  <title>Isaiah George | Digital Creator</title>
+  <meta name="description" content="Isaiah George — Digital Creator, UGC Specialist, and Entrepreneur offering custom web design, social media management, and brand strategy services." />
+  <meta name="keywords" content="Isaiah George, Digital Creator, UGC Specialist, Content Creation, Model Website Design, Portfolio Design, Social Media Management, Influencer Marketing, Personal Branding" />
+  <meta name="author" content="Isaiah George" />
+  <meta property="og:title" content="Isaiah George | Digital Creator" />
+  <meta property="og:description" content="Explore Isaiah George's portfolio and services — Offering creative digital services for aspiring models, influencers, and brands." />
+  <meta property="og:image" content="images/IMG_6945.JPG" />
+  <meta property="og:url" content="https://isaiahgeorge-portfolio.netlify.app" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
   <meta name="theme-color" content="#121212" />
-
-  <!-- Stylesheets -->
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600&family=Inter:wght@300;500&display=swap" rel="stylesheet" />
-  <link href="https://cdn.jsdelivr.net/npm/lightbox2@2/dist/css/lightbox.min.css" rel="stylesheet" />
+  <title>Isaiah George | Digital Creator</title>
 
   <!-- Favicons -->
   <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
@@ -19,15 +22,27 @@
   <link rel="manifest" href="images/site.webmanifest">
   <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
 
-  <!-- SEO -->
-  <meta name="author" content="Isaiah George">
-  <meta name="keywords" content="Isaiah George, UGC Creator, Digital Content, Video Editing, London Creator, Portfolio Design">
-  <meta property="og:title" content="Isaiah George | Digital Creator">
-  <meta property="og:description" content="Digital Creator & UGC Specialist — creating for brands across the US and UK.">
-  <meta property="og:image" content="images/IMG_6945.JPG">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://isaiahgeorge-portfolio.netlify.app">
-  <meta name="twitter:card" content="summary_large_image">
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600&family=Inter:wght@300;500&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/lightbox2@2/dist/css/lightbox.min.css" rel="stylesheet" />
+
+  <!-- Structured Data for SEO (JSON-LD) -->
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Person",
+      "name": "Isaiah George",
+      "jobTitle": "Digital Creator & UGC Specialist",
+      "url": "https://isaiahgeorge-portfolio.netlify.app",
+      "image": "images/IMG_6945.JPG",
+      "description": "Isaiah George is a Digital Creator and UGC Specialist offering services such as web design, social media management, and influencer marketing.",
+      "sameAs": [
+        "https://www.instagram.com/isaiahgeorge0",
+        "https://www.tiktok.com/@isaiahgeorge00"
+      ]
+    }
+  </script>
 </head>
 
 <body>
@@ -35,10 +50,7 @@
   <!-- Navigation -->
   <header>
     <nav class="navbar">
-      <!-- Wrap the logo in a clickable <a> tag to go back to the home page -->
-      <a href="index.html" class="site-title">
-        Isaiah George
-      </a>
+      <a href="index.html" class="site-title">Isaiah George</a>
       <div class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">&#9776;</div>
       <ul class="nav-links" id="navLinks">
         <li><a href="index.html#about">About</a></li>
@@ -48,7 +60,6 @@
       </ul>
     </nav>
   </header>
-  
 
   <!-- Hero Section -->
   <section class="hero">
@@ -59,18 +70,13 @@
     </div>
   </section>
 
-  <!-- About -->
+  <!-- About Section -->
   <section id="about" class="about">
     <h2>About Me</h2>
-    <p>I’m Isaiah George, a London-born digital creative, aspiring model, and entrepreneur with a growing presence across the UK and US. I help brands and individuals stand out through engaging video content, personal branding, and web design that speaks with clarity.</p>
-  
-    <p>With a unique eye for storytelling and a hands-on approach, I focus on building visuals and strategies that feel real, not recycled. My journey into content creation and modeling has been shaped by a drive to connect, create, and constantly evolve.</p>
-  
-    <p>I believe that how you show up matters. My approach is rooted in <strong>“Presence. Precision. Personality.”</strong> It’s a reminder to stay bold, stay focused, and let who you are shine through everything you create.</p>
+    <p>I'm Isaiah George, a London-born digital creative, aspiring model, and entrepreneur offering tailored services to brands, influencers, and models. Let's work together to create unique and engaging content that resonates with your audience.</p>
   </section>
-  
 
-  <!-- Portfolio -->
+  <!-- Portfolio Section -->
   <section id="portfolio" class="portfolio">
     <h2>Portfolio</h2>
     <div class="gallery">
@@ -78,142 +84,49 @@
         <a href="images/IMG_6936.JPG" data-lightbox="portfolio" data-title="Editorial Shoot">
           <img src="images/IMG_6936.JPG" alt="Editorial Shoot">
         </a>
-        <div class="hover-caption">Editorial Shoot</div>
       </div>
-
       <div class="item">
         <video controls>
           <source src="images/your-video1.mp4" type="video/mp4">
-          Your browser does not support the video tag.
         </video>
-        <div class="hover-caption">Behind the Scenes</div>
       </div>
-
       <div class="item">
         <a href="images/IMG_.73456.jpeg" data-lightbox="portfolio" data-title="Studio Portrait">
           <img src="images/IMG_.73456.jpeg" alt="Studio Portrait">
         </a>
-        <div class="hover-caption">Studio Portrait</div>
       </div>
     </div>
   </section>
 
+  <!-- Services Section -->
+  <section id="services" class="services">
+    <h2>What I Offer</h2>
+    <div class="service-card">
+      <h3>Website Design for Models</h3>
+      <p>Custom websites to showcase your portfolio and attract attention from agencies and clients.</p>
+      <a href="services.html#website-design" class="cta-button">Learn More</a>
+    </div>
+    <div class="service-card">
+      <h3>Social Media Content Management</h3>
+      <p>Engaging content creation and management for growing your presence on platforms like Instagram and TikTok.</p>
+      <a href="services.html#content-management" class="cta-button">Learn More</a>
+    </div>
+    <div class="service-card">
+      <h3>Model Portfolio Creation</h3>
+      <p>Helping models build standout portfolios with professional photoshoots and optimized layouts.</p>
+      <a href="services.html#portfolio-creation" class="cta-button">Learn More</a>
+    </div>
+  </section>
 
-  <!-- Updated Services Section on index.html -->
-<section id="services" class="services">
-  <h2>What I Offer</h2>
-
-  <!-- Service 1: Website Design for Models -->
-  <div class="service-card">
-    <h3>Website Design for Models</h3>
-    <p>Custom websites designed to showcase your portfolio, promote your personal brand, and attract agencies or clients.</p>
-    <a href="services.html#website-design" class="cta-button">Learn More</a>
-  </div>
-
-  <!-- Service 2: Social Media Content Management -->
-  <div class="service-card">
-    <h3>Social Media Content Management</h3>
-    <p>Creation and management of engaging content tailored to boost visibility, engagement, and followership across platforms like Instagram, TikTok, and more.</p>
-    <a href="services.html#content-management" class="cta-button">Learn More</a>
-  </div>
-
-  <!-- Service 3: Model Portfolio Creation -->
-  <div class="service-card">
-    <h3>Model Portfolio Creation</h3>
-    <p>Helping aspiring and professional models build polished portfolios that stand out to agencies and clients.</p>
-    <a href="services.html#portfolio-creation" class="cta-button">Learn More</a>
-  </div>
-
-  <!-- Service 4: Brand Content Strategy -->
-  <div class="service-card">
-    <h3>Brand Content Strategy</h3>
-    <p>Strategic guidance for building a strong brand presence, improving content engagement, and expanding your audience base.</p>
-    <a href="services.html#brand-strategy" class="cta-button">Learn More</a>
-  </div>
-
-  <!-- Service 5: Influencer Marketing -->
-  <div class="service-card">
-    <h3>Influencer Marketing</h3>
-    <p>Collaborating with brands to create captivating and authentic sponsored content that resonates with your followers.</p>
-    <a href="services.html#influencer-marketing" class="cta-button">Learn More</a>
-  </div>
-
-  <!-- Service 6: Photo & Video Editing -->
-  <div class="service-card">
-    <h3>Photo & Video Editing</h3>
-    <p>High-quality photo and video editing services for photoshoots and social media content that help you stand out.</p>
-    <a href="services.html#photo-video-editing" class="cta-button">Learn More</a>
-  </div>
-</section>
-
-
-  
-
-  <!-- Contact -->
+  <!-- Contact Section -->
   <section id="contact" class="contact">
     <h2>Let’s Connect</h2>
-    <p>Reach out via email or drop me a message on social media.</p>
+    <p>Reach out to discuss how we can collaborate or for inquiries about my services.</p>
     <ul class="socials">
       <li><a href="mailto:isaiah120303@gmail.com">Email Me</a></li>
       <li><a href="https://www.instagram.com/isaiahgeorge0" target="_blank">Instagram</a></li>
       <li><a href="https://www.tiktok.com/@isaiahgeorge00" target="_blank">TikTok</a></li>
     </ul>
-
-    <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" id="contact-form">
-      <input type="hidden" name="form-name" value="contact" />
-      <p style="display:none">
-        <label>Don’t fill this out if you’re human: <input name="bot-field" /></label>
-      </p>
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="email" name="email" placeholder="Your Email" required>
-      <textarea name="message" placeholder="Your Message" required></textarea>
-      <button type="submit">Send Message</button>
-      <p id="confirmation-message">Thanks! Your message was sent.</p>
-    </form>
-  </section>
-
-  <!-- Portfolio Gallery -->
-  <section class="portfolio-gallery">
-    <h2>Recent Shoot</h2>
-    <div class="image-grid">
-      <div class="image-container">
-        <img src="images/IMG_6936.JPG" alt="Look 1">
-        <div class="hover-caption">Urban Look </div>
-      </div>
-      <div class="image-container">
-        <img src="images/IMG_6924.JPG" alt="Look 2">
-        <div class="hover-caption">Group Vibes</div>
-      </div>
-      <div class="image-container">
-        <img src="images/IMG_6933.JPG" alt="Look 3">
-        <div class="hover-caption">Pure Aesthetic</div>
-      </div>
-      <div class="image-container">
-        <img src="images/IMG_6919.JPG" alt="Look 4">
-        <div class="hover-caption">Mens Fashion</div>
-      </div>
-      <div class="image-container">
-        <img src="images/IMG_6925.JPG" alt="Look 5">
-        <div class="hover-caption">Squad Goals</div>
-      </div>
-      <div class="image-container">
-        <img src="images/IMG_6927.JPG" alt="Look 6">
-        <div class="hover-caption">Style Focus</div>
-      </div>
-      <div class="image-container">
-        <img src="images/IMG_6929.JPG" alt="Look 7">
-        <div class="hover-caption">In the Moment</div>
-      </div>
-      <div class="image-container">
-        <img src="images/IMG_6934.JPG" alt="Look 8">
-        <div class="hover-caption">Outfit Appreciation</div>
-      </div>
-      <div class="image-container">
-        <img src="images/IMG_6942.JPG" alt="Look 9">
-        <div class="hover-caption">Close-up Focus</div>
-      </div>
-         
-    </div>
   </section>
 
   <!-- Footer -->
@@ -222,23 +135,23 @@
   </footer>
 
   <!-- Scripts -->
-<!-- External Library (keep this without defer) -->
-<script src="https://cdn.jsdelivr.net/npm/lightbox2@2/dist/js/lightbox.min.js"></script>
-
-<!-- Local Scripts (with defer) -->
-<script src="scripts/lightbox-init.js" defer></script>
-<script src="scripts/scroll-highlight.js" defer></script>
-<script src="scripts/form-handler.js" defer></script>
-<script src="scripts/analytics.js" defer></script>
-<script src="scripts/back-to-top.js" defer></script>
-<script src="scripts/mobile-nav.js" defer></script>
-<script src="scripts/main.js" defer></script>
-<script src="scripts/navbar-scroll.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/lightbox2@2/dist/js/lightbox.min.js"></script>
+  <script src="scripts/lightbox-init.js" defer></script>
+  <script src="scripts/scroll-highlight.js" defer></script>
+  <script src="scripts/form-handler.js" defer></script>
+  <script src="scripts/analytics.js" defer></script>
+  <script src="scripts/back-to-top.js" defer></script>
+  <script src="scripts/mobile-nav.js" defer></script>
+  <script src="scripts/main.js" defer></script>
+  <script src="scripts/navbar-scroll.js" defer></script>
 
   <!-- Back to Top Button -->
   <button id="backToTop" aria-label="Scroll to top">↑</button>
+
 </body>
 </html>
+
+
 
 
 
