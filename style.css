@@ -47,7 +47,7 @@ img {
   color: #2979ff; /* Change the color when hovering */
 }
 
-/* ========== NAVIGATION ========== */
+/* ========== NAVBAR ========== */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -57,24 +57,27 @@ img {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%; /* Ensure navbar spans the full width of the screen */
+  width: 100%;
   z-index: 1000;
-  box-sizing: border-box; /* Prevent any overflow issues */
+  box-sizing: border-box;
 }
 
 .navbar h1 {
   font-size: 1.5rem;
   white-space: nowrap;
 }
+
 .nav-links {
   display: flex;
   gap: 1.5rem;
 }
+
 .nav-links a.active {
   color: #ffffff;
   font-weight: bold;
   border-bottom: 2px solid #2979ff;
 }
+
 /* ========== MOBILE NAVIGATION ========== */
 .menu-toggle {
   display: none;
@@ -87,40 +90,38 @@ img {
   z-index: 1100;
 }
 
-
 @media (max-width: 768px) {
   .menu-toggle {
-    display: block;
+    display: block; /* Show the hamburger icon on mobile */
   }
 
   .nav-links {
     position: absolute;
     top: 70px;
     right: 20px;
-    background: rgba(30, 30, 30, 0.95); /* Transparent background */
+    background: rgba(30, 30, 30, 0.95); /* Slightly transparent background */
     backdrop-filter: blur(6px);         /* Subtle blur for modern glassy look */
-    -webkit-backdrop-filter: blur(6px); /* Safari support */
+    -webkit-backdrop-filter: blur(6px); /* For Safari */
     flex-direction: column;
     gap: 1rem;
     padding: 1rem 2rem;
     border-radius: 10px;
-    display: none;
+    display: none; /* Initially hidden */
     z-index: 1050;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4); /* Shadow for depth */
-
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    
     /* Animation settings */
     transition: transform 0.3s ease, opacity 0.3s ease;
     transform: translateY(-20px); /* Initially hidden above */
     opacity: 0; /* Initially hidden */
   }
-  
+
   .nav-links.active {
-    display: flex;
+    display: flex;  /* Ensure it's shown when active */
     transform: translateY(0); /* Final position */
     opacity: 1; /* Fully visible */
   }
 }
-
 
 /* ========== HERO SECTION ========== */
 .hero {

@@ -2,9 +2,12 @@
 const toggle = document.getElementById("menuToggle");
 const navLinks = document.getElementById("navLinks");
 
-toggle.addEventListener("click", () => {
-  navLinks.classList.toggle("active");
-});
+// Check if toggle and navLinks exist before adding event listeners
+if (toggle && navLinks) {
+  toggle.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+  });
+}
 
 const navItems = document.querySelectorAll(".nav-links a");
 
@@ -13,5 +16,6 @@ navItems.forEach(item => {
     navLinks.classList.remove("active");
   });
 });
+
 
 
