@@ -129,24 +129,28 @@ img {
 /* ========== HERO SECTION ========== */
 /* Hero Section */
 .hero {
+  position: relative; /* Needed to position the parallax background absolutely inside */
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   text-align: center;
-  padding: 8rem 2rem;  /* Adjust padding as needed */
-  margin-bottom: 6rem;  /* Added space below hero section */
-  background: linear-gradient(120deg, #121212, #1f1f1f);
-  max-width: 1200px; /* Limit max width for desktop */
-  margin: 0 auto; /* Center the section horizontally */
+  height: 100vh; /* Full screen height */
+  padding: 8rem 2rem;
+  overflow: hidden; /* Hide overflow from parallax */
+  margin-bottom: 6rem;
 }
 
 /* Hero text container */
 .hero-text {
   width: 100%;
-  max-width: 900px;  /* Set a max-width to avoid the text stretching too wide */
+  max-width: 900px;
   text-align: center;
+  position: relative; /* ensures it's layered correctly above the parallax bg */
+  z-index: 2; /* ensure it's above the background */
+  padding: 0 1rem;
 }
+
 
 .hero-text h2 {
   font-size: 2.5rem;
