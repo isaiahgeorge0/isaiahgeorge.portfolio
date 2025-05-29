@@ -129,14 +129,20 @@ img {
 
 /* ========== HERO SECTION ========== */
 .hero {
-  text-align: center;
+  display: flex;                      /* Using Flexbox for centering */
+  flex-direction: column;             /* Arrange items in a column */
+  align-items: center;                /* Horizontally center content */
+  justify-content: center;            /* Vertically center content */
+  text-align: center;                 /* Ensure text is centered */
   padding: 6rem 2rem;
   background: linear-gradient(120deg, #121212, #1f1f1f);
 }
+
 .hero h2 {
   font-size: 2.5rem;
   margin-bottom: 1rem;
 }
+
 .cta-button {
   background: #2979ff;
   color: white;
@@ -147,9 +153,12 @@ img {
   display: inline-block;
   transition: all 0.3s ease;
 }
+
 .cta-button:hover {
   background-color: #1a5cd8;
   transform: scale(1.05);
+}
+
 }
 /* ========== SECTION LAYOUTS ========== */
 .about, .services, .contact, .portfolio-gallery {
