@@ -134,13 +134,12 @@ img {
   align-items: center;
   flex-direction: column;
   text-align: center;
-  padding: 8rem 2rem; /* Adjust padding as needed */
+  padding: 8rem 2rem; /* Adjusted padding */
   margin-bottom: 6rem; /* Space below hero section */
   background: linear-gradient(120deg, #121212, #1f1f1f);
-  max-width: 1200px; /* Limit max width to avoid stretching */
-  margin: 0 auto; /* Center the hero section */
+  max-width: 1200px; /* Limit max width */
+  margin: 0 auto; /* Center the section horizontally */
 }
-
 
 .hero-text {
   width: 100%;
