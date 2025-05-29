@@ -134,7 +134,9 @@ img {
   align-items: center;
   flex-direction: column;
   text-align: center;
-  padding: 6rem 1.5rem; /* Adjusted horizontal padding */
+ /* Hero Section Adjustment */
+  padding: 8rem 2rem; /* Adjust padding as needed */
+  margin-bottom: 6rem; /* Added space below hero section */
   background: linear-gradient(120deg, #121212, #1f1f1f);
 }
 
@@ -175,8 +177,8 @@ img {
 /* ========== SECTION LAYOUTS ========== */
 .about, .services, .contact, .portfolio-gallery {
   padding: 4rem 2rem;
-  max-width: 900px;
-  margin: auto;
+  max-width: 1200px;
+  margin: 4rem auto;
 }
 .portfolio {
   padding: 4rem 2rem;
