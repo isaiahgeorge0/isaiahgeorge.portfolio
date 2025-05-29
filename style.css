@@ -144,9 +144,10 @@ img {
 
 .hero-text {
   width: 100%;
-  max-width: 600px;
+  max-width: 800px; /* Adjusted max width for better alignment */
   text-align: center;
 }
+
 
 .hero-text h2 {
   font-size: 2.5rem;
