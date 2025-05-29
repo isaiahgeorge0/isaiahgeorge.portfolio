@@ -125,28 +125,28 @@ img {
 }
 
   }
-}
 
 /* ========== HERO SECTION ========== */
+/* Hero Section */
 .hero {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   text-align: center;
-  padding: 8rem 2rem; /* Adjusted padding */
-  margin-bottom: 6rem; /* Space below hero section */
+  padding: 8rem 2rem;  /* Adjust padding as needed */
+  margin-bottom: 6rem;  /* Added space below hero section */
   background: linear-gradient(120deg, #121212, #1f1f1f);
-  max-width: 1200px; /* Limit max width */
+  max-width: 1200px; /* Limit max width for desktop */
   margin: 0 auto; /* Center the section horizontally */
 }
 
+/* Hero text container */
 .hero-text {
   width: 100%;
-  max-width: 800px; /* Adjusted max width for better alignment */
+  max-width: 900px;  /* Set a max-width to avoid the text stretching too wide */
   text-align: center;
 }
-
 
 .hero-text h2 {
   font-size: 2.5rem;
@@ -175,6 +175,7 @@ img {
   background-color: #1a5cd8;
   transform: scale(1.05);
 }
+
 
 /* ========== SECTION LAYOUTS ========== */
 .about, .services, .contact, .portfolio-gallery {
