@@ -198,15 +198,26 @@ img {
 .image-grid {
   display: grid;
   gap: 1.5rem;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(3, 1fr);  /* Set 3 columns for desktop */
   margin-top: 2rem;
 }
-.item, .image-container {
+
+/* For mobile view: 1 column */
+@media (max-width: 768px) {
+  .gallery,
+  .image-grid {
+    grid-template-columns: 1fr;  /* 1 column for mobile */
+  }
+}
+
+.item,
+.image-container {
   position: relative;
   overflow: hidden;
   border-radius: 10px;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
 }
+
 .hover-caption {
   position: absolute;
   bottom: 0;
@@ -222,19 +233,25 @@ img {
   transition: all 0.3s ease;
   border-radius: 0 0 10px 10px;
 }
+
+/* Hover effect for caption */
 .item:hover .hover-caption,
 .image-container:hover .hover-caption {
   opacity: 1;
   transform: translateY(0);
 }
+
 .gallery .item img,
 .image-container img {
   transition: transform 0.3s ease;
 }
+
+/* Hover effect for image scaling */
 .gallery .item:hover img,
 .image-container:hover img {
   transform: scale(1.03);
 }
+
 /* ========== SERVICES SECTION ========== */
 .service-card {
   background: #1f1f1f;
