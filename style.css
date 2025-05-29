@@ -130,26 +130,30 @@ img {
 /* ========== HERO SECTION ========== */
 .hero {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  flex-direction: column;
   text-align: center;
-  padding: 6rem 2rem;
+  padding: 6rem 1.5rem; /* Adjusted horizontal padding */
   background: linear-gradient(120deg, #121212, #1f1f1f);
-  max-width: 100%;
-  box-sizing: border-box;
 }
 
 .hero-text {
   width: 100%;
-  max-width: 600px; /* keeps content from stretching too wide */
-  margin: 0 auto;
-  padding: 0 1rem;
+  max-width: 600px;
+  text-align: center;
 }
 
-.hero h2 {
+.hero-text h2 {
   font-size: 2.5rem;
   margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.hero-text p {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  padding: 0 1rem;
 }
 
 .cta-button {
@@ -158,8 +162,8 @@ img {
   padding: 0.75rem 1.5rem;
   border-radius: 8px;
   font-weight: 600;
-  margin-top: 1rem;
   display: inline-block;
+  margin: 0 auto; /* center horizontally */
   transition: all 0.3s ease;
 }
 
@@ -168,7 +172,6 @@ img {
   transform: scale(1.05);
 }
 
-}
 /* ========== SECTION LAYOUTS ========== */
 .about, .services, .contact, .portfolio-gallery {
   padding: 4rem 2rem;
