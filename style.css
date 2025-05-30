@@ -597,27 +597,31 @@ section {
 
 /* ========== EMAIL POPUP ========== */
 .lead-popup {
+  display: none; /* Completely hidden until triggered */
   position: fixed;
-  top: 0; left: 0;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.8);
   justify-content: center;
   align-items: center;
   z-index: 9999;
-
-  /* Visibility logic */
-  display: flex;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.4s ease;
 }
 
 .lead-popup.visible {
-  opacity: 1;
-  pointer-events: all;
+  display: flex;
+  animation: fadeIn 0.4s ease forwards;
 }
 
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 
 .popup-content {
   background: #1e1e1e;
@@ -660,11 +664,13 @@ section {
 
 #closePopup {
   position: absolute;
-  top: 10px; right: 15px;
+  top: 10px;
+  right: 15px;
   color: white;
   font-size: 1.5rem;
   cursor: pointer;
 }
+
 
 
 
