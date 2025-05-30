@@ -259,14 +259,14 @@ img {
 /* ========================
    SERVICES SECTION - PARALLAX
 =========================== */
-/* === Services Section === */
 .services {
   padding: 4rem 2rem;
   max-width: 1200px;
-  margin: 0 auto;
+  margin: 0 auto 4rem auto; /* Adds space below */
   position: relative;
   z-index: 1;
 }
+
 
 .services h2 {
   text-align: center;
