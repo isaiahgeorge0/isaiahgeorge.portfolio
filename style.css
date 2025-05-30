@@ -260,9 +260,10 @@ img {
    SERVICES SECTION - PARALLAX
 =========================== */
 .services {
-  padding: 4rem 2rem 0;
+  padding: 4rem 2rem;
+  margin-bottom: 6rem;
   max-width: 1200px;
-  margin: 0 auto;
+  margin: auto;
   position: relative;
   z-index: 1;
 }
