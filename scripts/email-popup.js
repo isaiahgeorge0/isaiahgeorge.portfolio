@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function showPopupOnce() {
     if (popupShown) return;
-    if (window.scrollY > 400) { // Increased scroll threshold
+    if (window.scrollY > 1000)  { // Increased scroll threshold
       popup.classList.add("visible");
       popupShown = true;
     }
