@@ -4,10 +4,22 @@ document.addEventListener("DOMContentLoaded", function () {
   const form = popup.querySelector("form");
   const confirmation = popup.querySelector(".confirmation-message");
 
-  // Show popup after delay
-  setTimeout(() => {
-    popup.style.display = "flex";
-  }, 3000);
+  let popupShown = false;
+
+  // Show popup after user scrolls at least 100px
+  function showPopupOnce() {
+    if (popupShown) return;
+    if (window.scrollY > 100) {
+      popup.style.display = "flex";
+      popup.style.opacity = "0";
+      setTimeout(() => {
+        popup.style.opacity = "1";
+      }, 50);
+      popupShown = true;
+    }
+  }
+
+  window.addEventListener("scroll", showPopupOnce);
 
   // Close popup on X click
   closeBtn.addEventListener("click", () => {
@@ -34,6 +46,7 @@ document.addEventListener("DOMContentLoaded", function () {
       });
   });
 });
+
 
 
 
