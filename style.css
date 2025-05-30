@@ -262,7 +262,7 @@ img {
 .services {
   padding: 4rem 2rem;
   max-width: 1200px;
-  margin: 0 auto 4rem auto; /* Adds space below */
+  margin: 0 auto 1.5rem auto; /* Adds space below */
   position: relative;
   z-index: 1;
 }
@@ -293,7 +293,7 @@ img {
 }
 
 .service-wrapper:last-of-type {
-  margin-bottom: 8rem;
+  margin-bottom: 3rem;
 }
 
 /* === Overlay === */
