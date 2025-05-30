@@ -291,7 +291,6 @@ img {
   z-index: 1;
 }
 
-
 /* Overlay for readability */
 .service-wrapper .overlay {
   position: absolute;
@@ -310,7 +309,6 @@ img {
   color: white;
 }
 
-
 .service-card h3 {
   font-size: 1.8rem;
   margin-bottom: 1rem;
@@ -322,7 +320,6 @@ img {
   margin-bottom: 1.5rem;
 }
 
-/* CTA Button inside card */
 .service-card .cta-button {
   background: #2979ff;
   padding: 0.7rem 1.5rem;
@@ -351,19 +348,6 @@ img {
   .service-card p {
     font-size: 0.95rem;
   }
-}
-
-
-#contact,
-.portfolio-gallery {
-  padding-top: 6rem;
-  position: relative;
-  z-index: 0;
-}
-
-.services {
-  position: relative;
-  z-index: 2;
 }
 
 /* ========== CONTACT SECTION ========== */
