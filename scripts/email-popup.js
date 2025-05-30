@@ -1,5 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
   const popup = document.getElementById("leadPopup");
+  if (!popup) return; // Fail silently if popup not found
+
   const closeBtn = document.getElementById("closePopup");
   const form = popup.querySelector("form");
   const confirmation = popup.querySelector(".confirmation-message");
@@ -7,8 +9,8 @@ document.addEventListener("DOMContentLoaded", function () {
   let popupShown = false;
 
   function showPopupOnce() {
-    if (popupShown) return;
-    if (window.scrollY > 1000)  { // Increased scroll threshold
+    if (popupShown || !popup) return;
+    if (window.scrollY > 1000) {
       popup.classList.add("visible");
       popupShown = true;
     }
@@ -16,11 +18,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
   window.addEventListener("scroll", showPopupOnce);
 
-  closeBtn.addEventListener("click", () => {
+  closeBtn?.addEventListener("click", () => {
     popup.classList.remove("visible");
   });
 
-  form.addEventListener("submit", function (e) {
+  form?.addEventListener("submit", function (e) {
     e.preventDefault();
     const formData = new FormData(form);
 
@@ -39,6 +41,7 @@ document.addEventListener("DOMContentLoaded", function () {
       });
   });
 });
+
 
 
 
