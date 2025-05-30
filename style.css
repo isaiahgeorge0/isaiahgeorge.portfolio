@@ -698,32 +698,80 @@ section {
   }
 }
 
-
-/* ==== Services Page Layout Improvements ==== */
-.services#services {
+/* ========== SERVICES.HTML PAGE-SPECIFIC ========== */
+.page-services {
   max-width: 1000px;
   margin: 4rem auto 2rem auto;
   padding: 4rem 2rem 2rem;
 }
 
-.services#services h2 {
+.page-services h2 {
   text-align: center;
   font-size: 2.4rem;
   margin-bottom: 3rem;
+  color: #fff;
 }
 
-.services#services .service-card {
+.page-services .service-list {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.page-services .service-card {
   background-color: #181818;
   padding: 2rem;
-  margin-bottom: 3rem;
   border-radius: 12px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  color: #fff;
+  text-align: center;
 }
 
-.service-list {
-  max-width: 1000px;
-  margin: 0 auto;
+.page-services .service-card h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
 }
+
+.page-services .service-card p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.page-services .cta-button {
+  background: #2979ff;
+  padding: 0.7rem 1.5rem;
+  border-radius: 8px;
+  font-weight: bold;
+  color: white;
+  transition: background 0.3s ease;
+  display: inline-block;
+  margin-top: 1rem;
+}
+
+.page-services .cta-button:hover {
+  background: #1a5cd8;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .page-services {
+    padding: 3rem 1rem 2rem;
+  }
+
+  .page-services .service-card {
+    padding: 1.5rem;
+  }
+
+  .page-services .service-card h3 {
+    font-size: 1.5rem;
+  }
+
+  .page-services .service-card p {
+    font-size: 0.95rem;
+  }
+}
+
 
 
 
