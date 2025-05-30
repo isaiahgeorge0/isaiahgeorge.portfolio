@@ -370,6 +370,14 @@ img {
   }
 }
 
+/* Clearfix for .services to contain floated/absolute children */
+.services::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+
 
 
 /* ========== CONTACT SECTION ========== */
