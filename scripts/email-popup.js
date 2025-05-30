@@ -1,19 +1,40 @@
-document.addEventListener("DOMContentLoaded", () => {
-    const popup = document.getElementById("emailPopup");
-    const closeBtn = document.getElementById("closePopup");
-  
-    setTimeout(() => {
-      popup.style.display = "flex";
-    }, 1500); // Show after 1.5 seconds
-  
-    closeBtn.addEventListener("click", () => {
-      popup.style.display = "none";
-    });
-  
-    document.getElementById("popupForm").addEventListener("submit", function (e) {
-      e.preventDefault();
-      // You could integrate Formspree or Netlify forms here
-      popup.innerHTML = "<p>Thank you for subscribing!</p>";
-    });
+document.addEventListener("DOMContentLoaded", function () {
+  const popup = document.getElementById("leadPopup");
+  const closeBtn = document.getElementById("closePopup");
+  const form = popup.querySelector("form");
+  const confirmation = popup.querySelector(".confirmation-message");
+
+  // Show popup after delay
+  setTimeout(() => {
+    popup.style.display = "flex";
+  }, 3000);
+
+  // Close popup on X click
+  closeBtn.addEventListener("click", () => {
+    popup.style.display = "none";
   });
+
+  // Handle form submission
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    const formData = new FormData(form);
+
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams(formData).toString(),
+    })
+      .then(() => {
+        form.style.display = "none";
+        confirmation.style.display = "block";
+      })
+      .catch((error) => {
+        alert("Oops, something went wrong.");
+        console.error(error);
+      });
+  });
+});
+
+
+
   

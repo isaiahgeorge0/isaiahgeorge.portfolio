@@ -168,7 +168,10 @@
       <input type="email" name="email" placeholder="Your Email" data-aos="zoom-in" data-aos-delay="100" required>
       <textarea name="message" placeholder="Your Message" data-aos="zoom-in" data-aos-delay="100" required></textarea>
       <button type="submit" data-aos="fade-up" data-aos-duration="800">Send Message</button>
-      <p id="confirmation-message">Thanks! Your message was sent.</p>
+      <p id="confirmation-message">
+        Thanks for reaching out! 🎉
+      </p>
+      
     </form>
   </section>
 
@@ -227,17 +230,25 @@
 
   </footer>
 
-  <div class="email-popup" id="emailPopup">
-    <div class="popup-content">
-      <h3>Get Creator Tips + Insights</h3>
-      <p>Join my list for exclusive updates, content tips, and early access to projects.</p>
-      <form id="popupForm">
-        <input type="email" placeholder="Enter your email" required>
-        <button type="submit">Subscribe</button>
+  <div id="leadPopup" class="lead-popup">
+    <div class="popup-content" data-aos="zoom-in">
+      <h2>Get My Free Guide</h2>
+      <p>Download "10 Tips to Build Your Personal Brand" - just enter your email.</p>
+      <form name="lead-popup" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+        <input type="hidden" name="form-name" value="lead-popup" />
+        <p style="display:none">
+          <label>Don’t fill this out if you’re human: <input name="bot-field" /></label>
+        </p>
+        <input type="email" name="email" placeholder="Your Email" required />
+        <button type="submit">Send Me the Guide</button>
       </form>
-      <span class="close-popup" id="closePopup">&times;</span>
+      <div class="confirmation-message" style="display:none;">
+        ✅ Guide sent! <a href="/downloads/model-brand-guide.pdf" target="_blank">Click here to download</a>
+      </div>
+      <span id="closePopup">&times;</span>
     </div>
   </div>
+  
   
 
   <!-- Scripts -->
