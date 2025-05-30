@@ -1,5 +1,5 @@
 // scripts/parallax.js
-document.addEventListener('DOMContentLoaded', function () {
+window.addEventListener('load', function () {
   if (typeof Rellax !== 'undefined') {
     new Rellax('.rellax', {
       speed: -2,
@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', function () {
     console.warn('Rellax library not loaded.');
   }
 });
+
 
 
 
