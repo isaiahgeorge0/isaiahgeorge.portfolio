@@ -1,23 +1,23 @@
-document.addEventListener("DOMContentLoaded", function () {
+window.addEventListener("load", () => {
+  // Force scroll to top before showing the popup
+  window.scrollTo(0, 0);
+
   const popup = document.getElementById("leadPopup");
-  if (!popup) return;
-
   const closeBtn = document.getElementById("closePopup");
-  const form = popup.querySelector("form");
-  const confirmation = popup.querySelector(".confirmation-message");
+  const form = popup?.querySelector("form");
+  const confirmation = popup?.querySelector(".confirmation-message");
 
-  // Show popup shortly after page load (3s delay)
-  window.addEventListener("load", () => {
+  // Show popup as soon as everything has loaded
+  if (popup) {
     popup.classList.add("visible");
-  });
-  
+  }
 
-  // Close popup on X click
+  // Close popup when user clicks the "×"
   closeBtn?.addEventListener("click", () => {
     popup.classList.remove("visible");
   });
 
-  // Handle form submission
+  // Handle email form submission
   form?.addEventListener("submit", function (e) {
     e.preventDefault();
     const formData = new FormData(form);
@@ -29,7 +29,9 @@ document.addEventListener("DOMContentLoaded", function () {
     })
       .then(() => {
         form.style.display = "none";
-        confirmation.style.display = "block";
+        if (confirmation) {
+          confirmation.style.display = "block";
+        }
       })
       .catch((error) => {
         alert("Oops, something went wrong.");
@@ -37,6 +39,7 @@ document.addEventListener("DOMContentLoaded", function () {
       });
   });
 });
+
 
 
 
