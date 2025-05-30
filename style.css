@@ -720,11 +720,13 @@ section {
 
 .page-services .service-card {
   background-color: #181818;
-  padding: 2rem;
+  padding: 2.5rem;
   border-radius: 12px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
   color: #fff;
   text-align: center;
+  margin: 0 auto;
+  max-width: 800px;
 }
 
 .page-services .service-card h3 {
@@ -771,6 +773,7 @@ section {
     font-size: 0.95rem;
   }
 }
+
 
 
 
