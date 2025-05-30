@@ -257,37 +257,75 @@ img {
 }
 
 /* ========== SERVICES SECTION ========== */
+.services {
+  padding: 4rem 2rem 0;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.services h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  z-index: 2;
+  position: relative;
+}
+
+/* Service Block Wrapper with Parallax Background */
+/* SERVICES SECTION */
+.services {
+  padding: 4rem 2rem 0;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.services h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  z-index: 2;
+  position: relative;
+}
+
+/* Service Block Wrapper with Parallax Background */
 .service-wrapper {
   position: relative;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  margin: 2rem 0;
+  min-height: 450px;
   border-radius: 12px;
   overflow: hidden;
-  min-height: 400px;
+  margin-bottom: 2rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 1; /* Ensure it doesn't overlap other sections */
+  z-index: 1;
 }
 
+/* Dark overlay for readability */
 .service-wrapper .overlay {
   position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background: rgba(18, 18, 18, 0.5); /* Dark overlay for text readability */
-  z-index: 2;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1;
 }
 
+/* Service content */
 .service-card {
   position: relative;
-  z-index: 3; /* Above overlay */
+  z-index: 2;
   padding: 3rem 2rem;
   text-align: center;
   color: #fff;
-  background: transparent;
   max-width: 800px;
-  margin: 0 auto;
 }
 
 .service-card h3 {
@@ -297,14 +335,14 @@ img {
 
 .service-card p {
   font-size: 1rem;
-  line-height: 1.5;
+  line-height: 1.6;
   margin-bottom: 1.5rem;
 }
 
-/* Responsive styling */
+/* Responsive Fixes */
 @media (max-width: 768px) {
   .service-wrapper {
-    min-height: 350px;
+    min-height: 400px;
   }
 
   .service-card {
@@ -320,15 +358,14 @@ img {
   }
 }
 
-/* Prevent following sections from overlapping */
-#contact,
+/* Fix overlapping issue with next sections */
+.contact,
 .portfolio-gallery {
-  padding-top: 4rem;
-  margin-top: 4rem;
   position: relative;
-  z-index: 0;
+  z-index: 2;
+  background-color: #121212;
+  padding-top: 4rem;
 }
-
 
 
 
