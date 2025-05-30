@@ -6,27 +6,20 @@ document.addEventListener("DOMContentLoaded", function () {
 
   let popupShown = false;
 
-  // Show popup after user scrolls at least 100px
   function showPopupOnce() {
     if (popupShown) return;
-    if (window.scrollY > 100) {
-      popup.style.display = "flex";
-      popup.style.opacity = "0";
-      setTimeout(() => {
-        popup.style.opacity = "1";
-      }, 50);
+    if (window.scrollY > 400) { // Increased scroll threshold
+      popup.classList.add("visible");
       popupShown = true;
     }
   }
 
   window.addEventListener("scroll", showPopupOnce);
 
-  // Close popup on X click
   closeBtn.addEventListener("click", () => {
-    popup.style.display = "none";
+    popup.classList.remove("visible");
   });
 
-  // Handle form submission
   form.addEventListener("submit", function (e) {
     e.preventDefault();
     const formData = new FormData(form);
@@ -46,6 +39,7 @@ document.addEventListener("DOMContentLoaded", function () {
       });
   });
 });
+
 
 
 
