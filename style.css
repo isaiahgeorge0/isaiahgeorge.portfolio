@@ -464,3 +464,13 @@ section {
   outline: none;
   box-shadow: 0 0 10px rgba(41, 121, 255, 0.5); /* Focused state with glow */
 }
+
+/* BLOG1-IMAGE */
+.blog1-image {
+  max-width: 100%;
+  width: 400px;
+  height: auto;
+  margin: 2rem auto;
+  display: block;
+  border-radius: 8px;
+}
