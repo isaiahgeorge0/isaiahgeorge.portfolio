@@ -7,9 +7,10 @@ document.addEventListener("DOMContentLoaded", function () {
   const confirmation = popup.querySelector(".confirmation-message");
 
   // Show popup shortly after page load (3s delay)
-  setTimeout(() => {
+  window.addEventListener("load", () => {
     popup.classList.add("visible");
-  }, 3000); // Change 3000 to 0 if you want it to show instantly
+  });
+  
 
   // Close popup on X click
   closeBtn?.addEventListener("click", () => {
