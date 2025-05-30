@@ -257,12 +257,75 @@ img {
 }
 
 /* ========== SERVICES SECTION ========== */
-.service-card {
-  background: #1f1f1f;
-  margin-top: 2rem;
-  padding: 1.5rem;
-  border-radius: 10px;
+/* Parallax section wrapper */
+.service-wrapper {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 2rem 0;
+  border-radius: 12px;
+  overflow: hidden;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
+/* Overlay for readability */
+.service-wrapper .overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(18, 18, 18, 0.5);
+  z-index: 1;
+}
+
+/* Service content block */
+.service-card {
+  position: relative;
+  z-index: 2;
+  padding: 3rem 2rem;
+  text-align: center;
+  color: #fff;
+  background: transparent;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Heading inside service block */
+.service-card h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+/* Paragraph inside service block */
+.service-card p {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+}
+
+/* Responsive fixes */
+@media (max-width: 768px) {
+  .service-wrapper {
+    background-attachment: scroll;
+    min-height: 350px;
+  }
+
+  .service-card {
+    padding: 2rem 1rem;
+  }
+
+  .service-card h3 {
+    font-size: 1.5rem;
+  }
+
+  .service-card p {
+    font-size: 0.95rem;
+  }
+}
+
+
 /* ========== CONTACT SECTION ========== */
 .contact ul {
   display: flex;
