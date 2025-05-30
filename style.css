@@ -592,31 +592,38 @@ section {
   border-radius: 8px;
 }
 
-
-
-
 /* ========== EMAIL POPUP ========== */
 .lead-popup {
-  position: fixed; /* Follows the screen (not the content) */
+  display: none;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.8);
-  justify-content: center;
-  align-items: center;
+  height: auto; /* Only as tall as content */
+  background: rgba(0, 0, 0, 0.9);
   z-index: 9999;
-
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.4s ease;
-  display: flex; /* Always flex, just invisible until shown */
+  padding: 2rem 1rem;
+  justify-content: center;
+  align-items: flex-start; /* Align content to top */
 }
 
 .lead-popup.visible {
-  opacity: 1;
-  pointer-events: all;
+  display: flex;
+  animation: slideDown 0.4s ease forwards;
 }
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
 
 .popup-content {
   background: #1e1e1e;
@@ -627,17 +634,6 @@ section {
   position: relative;
   color: #fff;
   animation: fadeIn 0.4s ease;
-}
-
-@keyframes fadeIn {
-  from {
-    transform: scale(0.95);
-    opacity: 0;
-  }
-  to {
-    transform: scale(1);
-    opacity: 1;
-  }
 }
 
 .popup-content h2 {
