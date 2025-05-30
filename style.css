@@ -364,8 +364,10 @@ img {
   }
 }
 
-
-
+.spacer {
+  height: 4rem;
+  clear: both;
+}
 
 /* ========== CONTACT SECTION ========== */
 .contact ul {
