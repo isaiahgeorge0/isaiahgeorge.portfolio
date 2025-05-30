@@ -259,8 +259,9 @@ img {
 /* ========================
    SERVICES SECTION - PARALLAX
 =========================== */
+/* Services Section */
 .services {
-  padding: 4rem 2rem 6rem;
+  padding: 4rem 2rem;
   max-width: 1200px;
   margin: 0 auto;
   position: relative;
@@ -274,7 +275,7 @@ img {
   color: #fff;
 }
 
-/* Each parallax-enabled block */
+/* Each Parallax Service Card */
 .service-wrapper {
   position: relative;
   background-size: cover;
@@ -282,7 +283,7 @@ img {
   background-repeat: no-repeat;
   min-height: 420px;
   padding: 4rem 2rem;
-  margin: 0 auto 4rem;
+  margin-bottom: 6rem; /* Creates space BELOW each block */
   border-radius: 12px;
   display: flex;
   align-items: center;
@@ -291,7 +292,11 @@ img {
   z-index: 1;
 }
 
-/* Dark overlay for readability */
+.service-wrapper:last-of-type {
+  margin-bottom: 10rem; /* Extra space below the last block to avoid overlap */
+}
+
+/* Overlay */
 .service-wrapper .overlay {
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
@@ -299,7 +304,7 @@ img {
   z-index: 1;
 }
 
-/* Service content */
+/* Service Card Content */
 .service-card {
   position: relative;
   z-index: 2;
@@ -328,41 +333,42 @@ img {
   font-weight: bold;
   transition: background 0.3s ease;
   display: inline-block;
-  color: white;
-  text-decoration: none;
 }
 
 .service-card .cta-button:hover {
   background: #1a5cd8;
 }
 
-/* Next sections: ensure they do NOT overlap */
-.portfolio-gallery,
-.contact {
-  margin-top: 4rem;
+/* Spacing to prevent overlap */
+.contact,
+.portfolio-gallery {
   position: relative;
   z-index: 2;
-  background-color: #121212;
   padding-top: 6rem;
-  clear: both;
+  margin-top: 6rem;
+  background-color: #121212;
 }
 
-/* Responsive design */
+/* Mobile responsiveness */
 @media (max-width: 768px) {
   .service-wrapper {
-    min-height: 350px;
+    min-height: 360px;
     padding: 3rem 1rem;
   }
+
   .service-card {
     padding: 2rem 1rem;
   }
+
   .service-card h3 {
     font-size: 1.5rem;
   }
+
   .service-card p {
     font-size: 0.95rem;
   }
 }
+
 
 .spacer {
   height: 4rem;
