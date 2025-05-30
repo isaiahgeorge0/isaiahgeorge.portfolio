@@ -256,31 +256,41 @@ img {
   transform: scale(1.03);
 }
 
-/* ========== SERVICES SECTION ========== */
-/* Parallax section wrapper */
+/* ========== SERVICES SECTION WITH PARALLAX SUPPORT ========== */
+
+.services {
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
 .service-wrapper {
   position: relative;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  margin: 2rem 0;
-  border-radius: 12px;
-  overflow: hidden;
-  min-height: 400px;
+  min-height: 100vh; /* Full screen height */
   display: flex;
   align-items: center;
   justify-content: center;
+  border-radius: 12px;
+  overflow: hidden;
+  z-index: 1;
+  margin-bottom: 2rem;
 }
 
-/* Overlay for readability */
 .service-wrapper .overlay {
   position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background: rgba(18, 18, 18, 0.5);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(18, 18, 18, 0.55); /* Adjust opacity for readability */
   z-index: 1;
 }
 
-/* Service content block */
 .service-card {
   position: relative;
   z-index: 2;
@@ -292,24 +302,20 @@ img {
   margin: 0 auto;
 }
 
-/* Heading inside service block */
 .service-card h3 {
   font-size: 1.8rem;
   margin-bottom: 1rem;
 }
 
-/* Paragraph inside service block */
 .service-card p {
   font-size: 1rem;
   line-height: 1.5;
   margin-bottom: 1.5rem;
 }
 
-/* Responsive fixes */
 @media (max-width: 768px) {
   .service-wrapper {
-    background-attachment: scroll;
-    min-height: 350px;
+    min-height: 90vh; /* Slightly smaller on mobile if needed */
   }
 
   .service-card {
@@ -324,6 +330,7 @@ img {
     font-size: 0.95rem;
   }
 }
+
 
 
 /* ========== CONTACT SECTION ========== */
