@@ -675,6 +675,50 @@ section {
   cursor: pointer;
 }
 
+@media (max-width: 480px) {
+  .popup-content {
+    width: 90%;
+    padding: 1.5rem;
+  }
+
+  .popup-content h2 {
+    font-size: 1.3rem;
+  }
+
+  .popup-content p {
+    font-size: 1rem;
+  }
+
+  .popup-content input[type="email"] {
+    font-size: 0.9rem;
+  }
+
+  .popup-content button {
+    font-size: 0.9rem;
+  }
+}
+
+
+/* ==== Services Page Layout Improvements ==== */
+.services#services {
+  max-width: 1000px;
+  margin: 4rem auto 2rem auto;
+  padding: 4rem 2rem 2rem;
+}
+
+.services#services h2 {
+  text-align: center;
+  font-size: 2.4rem;
+  margin-bottom: 3rem;
+}
+
+.services#services .service-card {
+  background-color: #181818;
+  padding: 2rem;
+  margin-bottom: 3rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
 
 
 

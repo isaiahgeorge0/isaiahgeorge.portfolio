@@ -1,23 +1,22 @@
 window.addEventListener("load", () => {
-  // Force scroll to top before showing the popup
-  window.scrollTo(0, 0);
+  // Only show the popup if not dismissed before
+  if (localStorage.getItem("popupDismissed") === "true") return;
 
+  window.scrollTo(0, 0);
   const popup = document.getElementById("leadPopup");
   const closeBtn = document.getElementById("closePopup");
   const form = popup?.querySelector("form");
   const confirmation = popup?.querySelector(".confirmation-message");
 
-  // Show popup as soon as everything has loaded
   if (popup) {
     popup.classList.add("visible");
   }
 
-  // Close popup when user clicks the "×"
   closeBtn?.addEventListener("click", () => {
     popup.classList.remove("visible");
+    localStorage.setItem("popupDismissed", "true");
   });
 
-  // Handle email form submission
   form?.addEventListener("submit", function (e) {
     e.preventDefault();
     const formData = new FormData(form);
@@ -39,6 +38,7 @@ window.addEventListener("load", () => {
       });
   });
 });
+
 
 
 
