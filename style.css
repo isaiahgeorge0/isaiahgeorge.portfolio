@@ -261,12 +261,12 @@ img {
 =========================== */
 .services {
   padding: 4rem 2rem;
-  margin-bottom: 6rem;
   max-width: 1200px;
-  margin: auto;
+  margin: 0 auto 6rem;
   position: relative;
   z-index: 1;
 }
+
 
 .services h2 {
   text-align: center;
@@ -274,6 +274,12 @@ img {
   margin-bottom: 3rem;
   color: #fff;
 }
+
+.portfolio-gallery,
+.contact {
+  margin-top: 4rem;
+}
+
 
 /* Each parallax block */
 .service-wrapper {
@@ -350,6 +356,8 @@ img {
     font-size: 0.95rem;
   }
 }
+
+
 
 /* ========== CONTACT SECTION ========== */
 .contact ul {
