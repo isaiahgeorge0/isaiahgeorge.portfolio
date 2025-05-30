@@ -260,13 +260,12 @@ img {
    SERVICES SECTION - PARALLAX
 =========================== */
 .services {
-  padding: 4rem 2rem;
+  padding: 4rem 2rem 6rem;
   max-width: 1200px;
-  margin: 0 auto 6rem;
+  margin: 0 auto;
   position: relative;
   z-index: 1;
 }
-
 
 .services h2 {
   text-align: center;
@@ -275,13 +274,7 @@ img {
   color: #fff;
 }
 
-.portfolio-gallery,
-.contact {
-  margin-top: 4rem;
-}
-
-
-/* Each parallax block */
+/* Each parallax-enabled block */
 .service-wrapper {
   position: relative;
   background-size: cover;
@@ -298,7 +291,7 @@ img {
   z-index: 1;
 }
 
-/* Overlay for readability */
+/* Dark overlay for readability */
 .service-wrapper .overlay {
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
@@ -306,6 +299,7 @@ img {
   z-index: 1;
 }
 
+/* Service content */
 .service-card {
   position: relative;
   z-index: 2;
@@ -334,13 +328,26 @@ img {
   font-weight: bold;
   transition: background 0.3s ease;
   display: inline-block;
+  color: white;
+  text-decoration: none;
 }
 
 .service-card .cta-button:hover {
   background: #1a5cd8;
 }
 
-/* Responsive Fixes */
+/* Next sections: ensure they do NOT overlap */
+.portfolio-gallery,
+.contact {
+  margin-top: 4rem;
+  position: relative;
+  z-index: 2;
+  background-color: #121212;
+  padding-top: 6rem;
+  clear: both;
+}
+
+/* Responsive design */
 @media (max-width: 768px) {
   .service-wrapper {
     min-height: 350px;
@@ -356,6 +363,7 @@ img {
     font-size: 0.95rem;
   }
 }
+
 
 
 
