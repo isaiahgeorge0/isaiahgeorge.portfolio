@@ -259,8 +259,9 @@ img {
 /* ========================
    SERVICES SECTION - PARALLAX
 =========================== */
+/* === Services Section === */
 .services {
-  padding: 4rem 2rem 0; /* Remove bottom padding to reduce stacking with next block */
+  padding: 4rem 2rem;
   max-width: 1200px;
   margin: 0 auto;
   position: relative;
@@ -270,11 +271,11 @@ img {
 .services h2 {
   text-align: center;
   font-size: 2.5rem;
-  margin-bottom: 1.5rem; /* Reduced from 3rem */
+  margin-bottom: 3rem;
   color: #fff;
 }
 
-/* Each Parallax Service Card */
+/* === Each Parallax Service Block === */
 .service-wrapper {
   position: relative;
   background-size: cover;
@@ -282,7 +283,7 @@ img {
   background-repeat: no-repeat;
   min-height: 420px;
   padding: 4rem 2rem;
-  margin-bottom: 4rem; /* Adjusted spacing below each card */
+  margin-bottom: 5rem;
   border-radius: 12px;
   display: flex;
   align-items: center;
@@ -291,16 +292,11 @@ img {
   z-index: 1;
 }
 
-/* Ensure first card isn't pushed down */
-.service-wrapper:first-of-type {
-  margin-top: 0;
-}
-
 .service-wrapper:last-of-type {
-  margin-bottom: 8rem; /* Extra space to prevent footer overlap */
+  margin-bottom: 8rem;
 }
 
-/* Overlay */
+/* === Overlay === */
 .service-wrapper .overlay {
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
@@ -308,7 +304,7 @@ img {
   z-index: 1;
 }
 
-/* Service Card Content */
+/* === Service Card Content === */
 .service-card {
   position: relative;
   z-index: 2;
@@ -343,17 +339,18 @@ img {
   background: #1a5cd8;
 }
 
-/* Spacing to prevent overlap with following sections */
+/* === Contact & Portfolio Fix to Prevent Overlap === */
 .contact,
 .portfolio-gallery {
+  padding: 6rem 2rem 4rem;
+  max-width: 1200px;
+  margin: 0 auto;
   position: relative;
   z-index: 2;
-  padding-top: 6rem;
-  margin-top: 4rem;
   background-color: #121212;
 }
 
-/* Mobile responsiveness */
+/* === Responsive Fixes === */
 @media (max-width: 768px) {
   .service-wrapper {
     min-height: 360px;
@@ -373,11 +370,6 @@ img {
   }
 }
 
-/* Extra spacing helper (used only if needed) */
-.spacer {
-  height: 4rem;
-  clear: both;
-}
 
 
 /* ========== CONTACT SECTION ========== */
