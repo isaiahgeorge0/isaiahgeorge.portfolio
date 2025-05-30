@@ -1,27 +1,22 @@
 document.addEventListener("DOMContentLoaded", function () {
   const popup = document.getElementById("leadPopup");
-  if (!popup) return; // Fail silently if popup not found
+  if (!popup) return;
 
   const closeBtn = document.getElementById("closePopup");
   const form = popup.querySelector("form");
   const confirmation = popup.querySelector(".confirmation-message");
 
-  let popupShown = false;
+  // Show popup shortly after page load (3s delay)
+  setTimeout(() => {
+    popup.classList.add("visible");
+  }, 3000); // Change 3000 to 0 if you want it to show instantly
 
-  function showPopupOnce() {
-    if (popupShown || !popup) return;
-    if (window.scrollY > 1000) {
-      popup.classList.add("visible");
-      popupShown = true;
-    }
-  }
-
-  window.addEventListener("scroll", showPopupOnce);
-
+  // Close popup on X click
   closeBtn?.addEventListener("click", () => {
     popup.classList.remove("visible");
   });
 
+  // Handle form submission
   form?.addEventListener("submit", function (e) {
     e.preventDefault();
     const formData = new FormData(form);
@@ -41,6 +36,7 @@ document.addEventListener("DOMContentLoaded", function () {
       });
   });
 });
+
 
 
 
