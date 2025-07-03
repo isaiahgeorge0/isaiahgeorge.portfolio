@@ -127,7 +127,6 @@ img {
   }
 
 /* ========== HERO SECTION ========== */
-/* Hero Section */
 .hero {
   position: relative; /* Needed to position the parallax background absolutely inside */
   display: flex;
@@ -179,6 +178,15 @@ img {
   background-color: #1a5cd8;
   transform: scale(1.05);
 }
+
+.funnel-buttons {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
 
 
 /* ========== SECTION LAYOUTS ========== */
