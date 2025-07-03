@@ -774,6 +774,20 @@ section {
   }
 }
 
+/* ========== FOOTER ========== */
+.footer-btn {
+  color: #fff;
+  background: #2979ff;
+  padding: 0.5rem 1.25rem;
+  border-radius: 6px;
+  font-weight: 600;
+  display: inline-block;
+  transition: background 0.3s ease;
+}
+
+.footer-btn:hover {
+  background: #1a5cd8;
+}
 
 
 
