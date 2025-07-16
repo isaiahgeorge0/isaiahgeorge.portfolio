@@ -89,15 +89,35 @@
       <div class="hover-caption">Studio Portrait</div>
     </div>
 
-  <section id="contact" class="contact">
-    <h2>Let’s Work Together</h2>
-    <p>DM me on Instagram or email me below with campaign details.</p>
+<section id="contact" class="contact" data-aos="fade-up" data-aos-duration="800">
+    <h2>Let’s Connect</h2>
+    <p>Reach out via email or drop me a message on social media.</p>
     <ul class="socials">
-      <li><a href="mailto:bookings@isaiahgeorge.com">Email Me</a></li>
+      <li><a href="mailto:isaiah@isaiahgeorge.com">Email Me</a></li>
       <li><a href="https://www.instagram.com/isaiahgeorge0" target="_blank">Instagram</a></li>
       <li><a href="https://www.tiktok.com/@isaiahgeorge00" target="_blank">TikTok</a></li>
     </ul>
+
+    <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" id="contact-form">
+      <input type="hidden" name="form-name" value="contact" />
+      <p style="display:none">
+        <label>Don’t fill this out if you’re human: <input name="bot-field" /></label>
+      </p>
+      <input type="text" name="name" placeholder="Your Name" data-aos="zoom-in" data-aos-delay="100" required>
+      <input type="email" name="email" placeholder="Your Email" data-aos="zoom-in" data-aos-delay="100" required>
+      <textarea name="message" placeholder="Your Message" data-aos="zoom-in" data-aos-delay="100" required></textarea>
+      <button type="submit" data-aos="fade-up" data-aos-duration="800">Send Message</button>
+      <p id="confirmation-message">
+        Thanks for reaching out! 🎉
+      </p>
+      <div style="margin-top: 2rem; text-align: center;">
+         <p>Not quite ready to reach out?</p>
+          <a href="offer.html" class="cta-button">See Packages & Process</a>
+      </div>
+
+    </form>
   </section>
+
 
   <footer>
     <p>© 2025 Isaiah George. Built by me.</p>
